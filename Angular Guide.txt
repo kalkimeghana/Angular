@@ -1,0 +1,14 @@
+App componet is the Root component of app.
+
+All the html code will be placed at component html and css at component css files.
+
+All the static asserts i.e,Images will be placed at asserts folder.
+
+
+App component Will be created by default Whenever we create a project using ng new command.
+
+App component Will always be the Prarent component.If we create any other component it will become the child component.
+
+we can create a component using ng g component componentName
+
+we can add the child component where we want by wrapping the selector in component.ts file with tag and place where we want.
