@@ -4,6 +4,8 @@ All the html code will be placed at component html and css at component css file
 
 All the static asserts i.e,Images will be placed at asserts folder.
 
+Componennts:
+--------------
 
 App component Will be created by default Whenever we create a project using ng new command.
 
@@ -12,3 +14,65 @@ App component Will always be the Prarent component.If we create any other compon
 we can create a component using ng g component componentName
 
 we can add the child component where we want by wrapping the selector in component.ts file with tag and place where we want.
+
+Routing:
+--------
+In angular we can navigate between pages,that is known as routing
+ 
+for Routing
+ 
+1.frist we need import router module from angular in main or root component(i.e,in app.module.ts in App component).
+
+i.e,import { RouterModule} from '@angular/router'
+
+2.RouterModule has forRoot,the forRoot takes array of objects,Each objects takes path and the componet.
+ Path is the name of the router or extended Url and component is the name of the class, i.e., the component created.
+
+i.e,RouterModule.forRoot([
+
+         {
+             
+	path: '',
+             
+	component: HomeComponent
+          
+	},
+	{
+            
+	path: 'docs',
+            
+	component: DocsComponent
+        
+	},
+
+        {
+
+        path: 'project',
+
+        component: ProjectComponent
+ 
+        }
+
+    ])
+
+3.Default Route:
+At satarting the path is empty.that means that is a default route.
+
+
+4.Now the path will added where ever we want,i.e,on a tag or etc.,...
+
+i.e,<button  class="learning"  type="button" name="button">
+     
+	 <a routerLink="docs">Get Started</a>
+
+    </button>
+
+    <button  class="project"  type="button" name="button">
+
+      <a routerLink="project">Sample Project</a>
+
+    </button>
+
+5.Now we place a router outlet tag where we want to display that component for the particular path.
+  <router-outlet></router-outlet>
+
